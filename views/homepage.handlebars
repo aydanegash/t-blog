@@ -1,0 +1,16 @@
+<!-- Loop over each object in the posts array -->
+<div class="row">
+  {{#each posts as |post| }}
+    <div class="column" class="posts">
+      <div  class="container1">
+        <div class="card-content">
+          <h2><a href="/post/{{post.id}}">{{post.title}}</a></h2>
+          <h6>Created by {{post.user.name}} on {{format_date post.date}}</h6><br>
+          <p1>{{post.content}}</p1>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+

@@ -1,0 +1,50 @@
+  <header class="page-title">
+  <h2>Hello, {{name}}!</h2>
+  </header>
+
+<div class="row">
+<div class="column">
+  <div  class="new-post">
+  {{!-- <div class="col-md-6"> --}}
+    <center><h3>Create a New Post:</h3><center>
+    <form class="new-post-form">
+      <div class="form-group">
+        <label for="post-title"> <h5>title:</h5></label>
+        <input class="form-input" type="text" id="post-title" name="post-title" />
+      </div>
+      <div class="form-group">
+        <label for="post-content"><h5>content:</h5></label>
+        <input class="form-input" type="text" id="post-content" name="post-content"></input>
+      </div>
+      <div class="form-group">
+        <button class="post-btn" type="submit" class="btn btn-primary" id="post-btn">Post</button>
+      </div>
+    </form>
+</div>
+</div>
+
+
+{{!-- {{#if post.length}} --}}
+  {{!-- <h3>Current Posts:</h3> --}}
+    <div class="column">
+    {{#each posts as |post| }}
+
+        <div  class="container1">
+          <div class="card-content">
+            <h2><a href="/post/{{post.id}}">{{post.title}}</a></h2>
+            <p1>{{post.content}}</p1>
+          </div>
+        </div>
+
+    {{/each}}
+    </div>
+  </div>
+{{!-- {{/if}} --}}
+</div>
+
+
+<script src="./js/profile.js"></script>
+
+
+
+
